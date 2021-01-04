@@ -93,15 +93,15 @@ function Calendar() {
     if (typeof container == "string") {container = this.$(container);}
     if (container && !(container instanceof NodeList)) {
       container.innerHTML = data;
-      console.log(className);
+      console.log(container);
       container.className = identifier + className;
     }
   };
 
   this.displayTime = function (hours, minutes, seconds) {
-    this.display(".time__hours", this.formatTime(hours), "time_hours");
-    this.display(".time__minutes", this.formatTime(minutes), "time_minutes");
-    this.display(".time__seconds", this.formatTime(seconds), "time_seconds");
+    this.display(".time__hours", this.formatTime(hours), "time__hours");
+    this.display(".time__minutes", this.formatTime(minutes), "time__minutes");
+    this.display(".time__seconds", this.formatTime(seconds), "time__seconds");
   };
 
   this.displayFullDate = function (year, monthName, date, dayName) {
