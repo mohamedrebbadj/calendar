@@ -93,7 +93,6 @@ function Calendar() {
     if (typeof container == "string") {container = this.$(container);}
     if (container && !(container instanceof NodeList)) {
       container.innerHTML = data;
-      console.log(container);
       container.className = identifier + className;
     }
   };
