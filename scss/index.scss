@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    color: #313131;
+}
+table {
+    width: 100%;
+    text-align: center;
+    font-size: 1.25em;
+    font-size: 1.25rem;
+}
+td, th {
+    width: (100% / 7);
+    height: 60px;
+}
+.calendar {
+    color: #fff;
+    max-width: 450px;
+    background-color: #353535;
+    background-color: rgba(#000, 0.80);
+    background-image: linear-gradient(-315deg, #343434, #444);
+    &__head {
+        padding-left: 15px;
+        padding-bottom: 30px;
+        padding-top: 25px;
+    }
+    &__time {
+        font-size: 2em;
+        font-family: fantasy;
+        letter-spacing: 2px;
+        padding-bottom: 15px;
+    }
+    &__date {
+        color: darken(deepskyblue, 5%);
+    }
+    table {
+        border-collapse: collapse;
+    }
+    thead {
+        color: #aaa;
+        font-size: 0.8em;
+        font-weight: normal;
+        th {
+            height: auto;
+            padding-bottom: 15px;
+            border-bottom: 2px solid darken(deepskyblue, 5%);
+        }
+    }
+    &__day {
+        transition: {
+            duration: 0.39s;
+            timing-function: ease;
+            property: color, background-color;
+        }
+        border-radius: 1px;
+        cursor: default;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        &--inactive {
+            color: #999;
+        }
+        &--active {
+            background-color: darken(deepskyblue, 5%);
+            box-shadow: 0 0 5px deepskyblue;
+            &:hover {
+                background-color: deepskyblue;
+            }
+        }
+    }
+    &__action {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        * {
+            flex: 1 1 0;
+        }
+    }
+    &__current {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__control {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        * {
+            flex: 1 1 0;
+        }
+    }
+}
