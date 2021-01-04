@@ -1,0 +1,4 @@
+prepros.config
+scss/
+node_modules/
+.vscode
